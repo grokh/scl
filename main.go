@@ -5,15 +5,16 @@ import (
 	"flag"
 )
 
-var port = flag.Int("port", 5443, "Listen port")
+var _ = fmt.Println
+
+var port = flag.Int("port", 5443, "TLS listening port")
 
 func main() {
 	flag.Parse()
-	fmt.Println("Hello, World!")
 
 	// receive TLS
 	// verify certificate
 	// check OCSP
-	// check AD
+	// check AD // go get github.com/mavricknz/ldap
 	// return TLS good/bad/unknown
 }
