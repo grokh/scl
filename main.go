@@ -5,8 +5,15 @@ import (
 	"flag"
 )
 
-var port = flag.Int("port", 5443, "Which port to listen on for requests. Default: 5443")
+var port = flag.Int("port", 5443, "Listen port")
 
 func main() {
+	flag.Parse()
 	fmt.Println("Hello, World!")
+
+	// receive TLS
+	// verify certificate
+	// check OCSP
+	// check AD
+	// return TLS good/bad/unknown
 }
